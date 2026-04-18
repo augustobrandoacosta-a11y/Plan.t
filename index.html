@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Planet Maker - 123 Slots</title>
+    <style>
+        body { margin: 0; overflow: hidden; background-color: #050505; color: white; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        #ui-layer {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            pointer-events: none; /* Allows clicking "through" the text to the 3D scene */
+        }
+        .stats { background: rgba(0, 0, 0, 0.6); padding: 10px; border-radius: 8px; border: 1px solid #444; }
+        h1 { margin: 0; font-size: 18px; color: #00ffcc; }
+    </style>
+</head>
+<body>
+
+    <div id="ui-layer">
+        <div class="stats">
+            <h1>Planet Maker</h1>
+            <p>Active Slots: <span id="slot-count">123</span> / 123</p>
+            <small>Scroll to Zoom | Drag to Rotate</small>
+        </div>
+    </div>
+
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+            }
+        }
+    </script>
+    <script type="module" src="script.js"></script>
+</body>
+</html>
